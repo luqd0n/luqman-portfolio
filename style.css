@@ -1,0 +1,141 @@
+/* General Styles */
+
+/* Keyframes for the walking animation (frames 9 to 18) */
+@keyframes walkDino {
+    0% { background-image: url('RedDino/RedDinosaur9.png'); }  /* Start walking at frame 9 */
+    11% { background-image: url('RedDino/RedDinosaur10.png'); }
+    22% { background-image: url('RedDino/RedDinosaur11.png'); }
+    33% { background-image: url('RedDino/RedDinosaur12.png'); }
+    44% { background-image: url('RedDino/RedDinosaur13.png'); }
+    55% { background-image: url('RedDino/RedDinosaur14.png'); }
+    66% { background-image: url('RedDino/RedDinosaur15.png'); }
+    77% { background-image: url('RedDino/RedDinosaur16.png'); }
+    88% { background-image: url('RedDino/RedDinosaur17.png'); }
+    100% { background-image: url('RedDino/RedDinosaur18.png'); }
+}
+
+/* Movement animation */
+@keyframes moveDino {
+    0% { left: -150px; } /* Start off-screen */
+    100% { left: 100%; }  /* Move to the right side of the screen */
+}
+
+/* Set up the dinosaur */
+#dinosaur {
+    position: absolute;
+    bottom: 200px; /* Adjust vertical position to ensure it's visible */
+    left: -150px; /* Starting position */
+    width: 300px;  /* Adjust size */
+    height: 200px; /* Adjust size */
+    background-repeat: no-repeat;
+    animation: walkDino 1s steps(10) infinite, moveDino 20s linear infinite; /* Sync walking and movement */
+    z-index: 999; /* Ensure dinosaur is above other content */
+}
+
+body {
+    font-family: 'Pokemon Solid', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #F1C40F 50%, #3B4CCA 50%); /* Softer Pokémon yellow with blue */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #F1C40F; /* Softer Pokémon yellow */
+    color: #2A75BB; /* Pokémon blue */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 6px solid #EE4035; /* Add red border */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 3px 3px 0 #2A75BB; /* Pokémon-style text shadow */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #2A75BB;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Section Styles */
+section {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+#about, #portfolio, #contact {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #EE4035; /* Pokémon red for headings */
+    border-bottom: 4px solid #EE4035; /* Red border */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    color: #3B4CCA; /* Pokémon blue */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    color: #3B4CCA; /* Pokémon blue */
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #3B4CCA;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    background-color: #EE4035; /* Pokémon red for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #F1C40F;
+    color: #2A75BB;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 6px solid #EE4035; /* Red border on the footer */
+}
+
+
+
